@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+thead {
+  background-color: #00bcd5;
+  line-height: 3;
+}
+
+thead th {
+  color: #fff;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: #333;
+}
