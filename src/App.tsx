@@ -1,27 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+// import './App.css'
+import { Content } from './components/content/content'
 import { Header } from './components/header/header'
+import { Title } from './components/title/title'
+import { Footer } from "./components/footer/footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [currentContent, setCurrentContent] = useState('profile');
   return (
     <>
-      <Header />
-      <h1 className="page-title">GoIT React homework #1</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header setCurrentContent={setCurrentContent} />
+      <main>
+        <Title />
+        <Content currentContent={currentContent} />
+      </main>
+      <Footer />
     </>
   )
 }
