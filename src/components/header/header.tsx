@@ -1,5 +1,5 @@
 import reactHomeLogo from '../../assets/reactHomeLogo.svg'
-import './header.css'
+import css from './header.module.css'
 
 type HeaderProps = {
     setCurrentContent: (content: string) => void;
@@ -11,41 +11,41 @@ export const Header = ({ setCurrentContent }: HeaderProps) => {
     };
 
     return (
-        <header className="header">
-            <div className="container">
-                <nav className="nav">
-                    <div className="logo-container">
+        <header className={css.header}>
+            <div>
+                <nav className={css.nav}>
+                    <div className={css.logoContainer}>
                         <a href="#" onClick={(e) => {
                             e.preventDefault();
                             handleContentChange('profile')
                         }}>
-                            <img src={reactHomeLogo} className="logo" alt="React home logo" />
+                            <img src={reactHomeLogo} className={css.logo} alt="React home logo" />
                         </a>
                     </div>    
-                    <ul className="nav-list">
-                        <li className="nav-item">
-                            <a className="nav-link {=$highlight-act}" href="#" onClick={(e) => {
+                    <ul className={css.navList}>
+                    <li className={css.navItem}>
+                            <a className={css.navLink} href="#" onClick={(e) => {
                                     e.preventDefault();
                                     handleContentChange('profile')
                                 }}>Profile
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link {=$highlight-act}" href="#" onClick={(e) => {
+                        <li className={css.navItem}>
+                            <a className={css.navLink} href="#" onClick={(e) => {
                                     e.preventDefault();
                                     handleContentChange('statistics')
                                 }}>Statistics
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link {=$highlight-act}" href="#" onClick={(e) => {
+                        <li className={css.navItem}>
+                            <a className={css.navLink} href="#" onClick={(e) => {
                                     e.preventDefault();
                                     handleContentChange('friendsList')
                                 }}>Friends list
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link {=$highlight-act}" href="#" onClick={(e) => {
+                        <li className={css.navItem}>
+                            <a className={css.navLink} href="#" onClick={(e) => {
                                     e.preventDefault();
                                     handleContentChange('transactions')
                                 }}>Transactions
